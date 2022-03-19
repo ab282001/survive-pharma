@@ -17,7 +17,7 @@ const category = (props) => {
     const router = useRouter();
 
     const handleClick=async(productRangeCategory)=>{
-        const host="http://localhost:3000"
+        const host="https://spp08.herokuapp.com/"
         let data=await fetch(`${host}/api/getAllProducts`)
         let parsedData=await data.json()
         let allProductsArray=parsedData.products
@@ -79,7 +79,7 @@ const category = (props) => {
 }
 
 export async function getServerSideProps(context){
-    const host="http://localhost:3000"
+    const host="https://spp08.herokuapp.com/"
     let productCat=context.query.category.split(/(?=[A-Z])/)
     let productCategory=""
     for (let index = 0; index < productCat.length; index++) {
