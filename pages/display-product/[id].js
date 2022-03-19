@@ -12,7 +12,7 @@ const Display = (props) => {
     const router = useRouter();
 
     const handleClick=async(productRangeCategory)=>{
-        const host="http://localhost:3000"
+        const host="https://spp08.herokuapp.com/"
         let data=await fetch(`${host}/api/getAllProducts`)
         let parsedData=await data.json()
         let allProductsArray=parsedData.products
@@ -27,7 +27,7 @@ const Display = (props) => {
     }
 
     const handleProductDisplayClick=async(productId,product_name)=>{
-        const host="http://localhost:3000"
+        const host="https://spp08.herokuapp.com/"
         let data=await fetch(`${host}/api/getAllProducts`)
         let parsedData=await data.json()
         let allProductsArray=parsedData.products
@@ -134,7 +134,7 @@ const Display = (props) => {
 }
 
 export async function getServerSideProps(context){
-    const host="http://localhost:3000"
+    const host="https://spp08.herokuapp.com/"
     let data=await fetch(`${host}/api/getAllProducts`)
     let parsedData=await data.json()
     let allProductsArray=parsedData.products
