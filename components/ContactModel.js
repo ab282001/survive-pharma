@@ -11,7 +11,7 @@ const ContactModel = (props) => {
         while(elements.length > 0){
             elements[0].parentNode.removeChild(elements[0]);
         }
-        const host="http://localhost:3000"
+        const host="https://spp08.herokuapp.com/"
         let data=await fetch(`${host}/api/getAllProducts`)
         let parsedData=await data.json()
         let allProductsArray=parsedData.products
